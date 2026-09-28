@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>free-metronome by rolin blake</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <main class="metronome">
+
+        <h1>Metronome</h1>
+
+        <div class="bpm-display">
+            <span id="bpmValue">120</span>
+            <span class="bpm-label">BPM</span>
+        </div>
+
+        <div class="tempo-controls">
+            <button id="decreaseBpm">−</button>
+            <input id="bpmSlider" type="range" min="40" max="240" value="120">
+            <button id="increaseBpm">+</button>
+        </div>
+
+        <div class="volume-control">
+            <label for="gainSlider">
+                Volume: <span id="gainValue">80%</span>
+            </label>
+            <input id="gainSlider" type="range" min="0" max="100" value="80">
+        </div>
+
+        <div class="time-signature">
+            <label for="timeSignature">Time Signature</label>
+            <select id="timeSignature">
+                <option value="4">4/4</option>
+                <option value="3">3/4</option>
+                <option value="2">2/4</option>
+                <option value="6">6/8</option>
+                <option value="9">9/8</option>
+                <option value="12">12/8</option>
+            </select>
+        </div>
+
+        <div id="beatIndicator" class="beat-indicator"></div>
+
+        <button id="startButton" class="start-button">Start</button>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
